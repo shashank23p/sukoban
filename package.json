@@ -1,0 +1,11 @@
+{
+  "name": "sukoban",
+  "version": "1.0.0",
+  "description": "Sukoban solver",
+  "main": "sukoban.js",
+  "scripts": {
+    "start": "node sukoban.js"
+  },
+  "author": "Ankita Jadhav",
+  "license": "MIT"
+}
