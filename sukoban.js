@@ -1,4 +1,5 @@
 "use strict";
+
 //function to create matrix representation of maze
 function getMatixMaze(maze, r, c) {
   try {
@@ -102,7 +103,14 @@ const sukoban = (input) => {
   );
 
   //outputing
-  return { pushes: finalPushes, walks: finalWalks, pathsFound, bestPath };
+  return {
+    pushes: finalPushes,
+    walks: finalWalks,
+    pathsFound,
+    bestPath,
+    mazeMatrix,
+    startPosition,
+  };
 };
 
 function bfs(adjList, start, target) {
@@ -132,7 +140,6 @@ function bfs(adjList, start, target) {
           (finalWalks == -1 || finalWalks > currentObject.walks))
       ) {
         finalPushes = currentObject.pushes;
-        console.log(currentObject);
         finalWalks = currentObject.walks;
         bestPath = [...currentObject.path];
       }

@@ -1,0 +1,60 @@
+#input {
+  font-family: monospace;
+  letter-spacing: 5px;
+}
+#level-div {
+  display: none;
+  height: auto;
+  overflow: auto;
+  position: relative;
+}
+.mazeRow {
+  clear: left;
+}
+#output {
+  font-size: 20px;
+  height: 25px;
+  width: 100%;
+  background-color: black;
+  color: limegreen;
+  padding: 0px 0px 2px 4px;
+  margin: 10px 0px;
+}
+.box,
+.target,
+.empty,
+.wall,
+.player {
+  width: 5%;
+  padding-top: 5%;
+  border: black 1px solid;
+  float: left;
+}
+.box {
+  background-color: transparent;
+  background: url("img/box.png");
+  background-size: cover;
+}
+.target {
+  background-color: green;
+}
+.wall {
+  background-color: brown;
+}
+.player {
+  background-color: transparent;
+  background: url("img/player.png");
+  background-size: cover;
+}
+.empty {
+  background-color: transparent;
+}
+
+.btn-back {
+  right: 5px;
+  display: block;
+  position: absolute;
+  top: 2px;
+  margin-bottom: 10px;
+  padding: 10px;
+}

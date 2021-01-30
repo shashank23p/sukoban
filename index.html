@@ -10,6 +10,7 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="style.css" />
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
@@ -19,7 +20,7 @@
   <body>
     <div class="container">
       <h1>Sukoban Solver</h1>
-      <div class="jumbotron">
+      <div class="jumbotron" id="input-div">
         <div class="form-group">
           <label for="input">Input:</label>
           <textarea
@@ -33,19 +34,13 @@
           <button class="btn btn-primary" id="loadInputBtn">Submit</button>
         </div>
       </div>
+      <div class="jumbotron" id="level-div">
+        <button class="btn btn-default btn-back" id="backBtn">X</button>
+        <div id="level"></div>
+      </div>
+      <h1>Output:</h1>
       <div class="container" id="output"></div>
     </div>
   </body>
-  <script type="module">
-    import { sukoban } from "./sukoban.js";
-    $("#loadInputBtn").click(function () {
-      $("#output").text("");
-      const input = $("#input").val();
-      const sukobanData = sukoban(input);
-      if (sukobanData.error)
-        $("#output").html(`<p style=color:red>Error: ${sukobanData.error}<p>`);
-      else if (sukobanData.pathsFound == 0) $("#output").text(-1);
-      else $("#output").text(`${sukobanData.pushes} ${sukobanData.walks}`);
-    });
-  </script>
+  <script type="module" src="script.js"></script>
 </html>
