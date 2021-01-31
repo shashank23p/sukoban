@@ -13,6 +13,10 @@ const sukoban = (input) => {
       error:
         "Line 1 of Input should be two integers seprated by space, Represention number of rows and coloums of maze",
     };
+  if (r > 20 || c > 20)
+    return {
+      error: "rows and coloms can't be bigger than 20",
+    };
   //creating matrix represntaion of maze
   const {
     mazeMatrix,
