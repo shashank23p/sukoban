@@ -6,10 +6,7 @@ $("#loadInputBtn").click(function () {
   const input = $("#input").val();
   const sukobanData = sukoban(input);
   var mazeMatrix = sukobanData.mazeMatrix;
-  if (sukobanData.error)
-    return $("#output").html(
-      `<p style=color:red>Error: ${sukobanData.error}<p>`
-    );
+  if (sukobanData.error) return $("#error").html(`Error: ${sukobanData.error}`);
   else if (sukobanData.pathsFound == 0) {
     updateMaze(mazeMatrix, sukobanData.startPosition.toString());
     return $("#output").text(-1);
