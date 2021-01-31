@@ -34,6 +34,7 @@ $("#backBtn").click(function () {
     clearTimeout(timeOuts.pop());
   }
 });
+
 function getRederedMaze(mazeMatrix, nextMove) {
   let levelHtml = "";
   for (let i = 0; i < mazeMatrix.length; i++) {
