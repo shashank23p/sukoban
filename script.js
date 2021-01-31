@@ -3,6 +3,7 @@ const timeOuts = [];
 //load button listner
 $("#loadInputBtn").click(function () {
   $("#output").text("");
+  $("#error").text("");
   const input = $("#input").val();
   const sukobanData = sukoban(input);
   var mazeMatrix = sukobanData.mazeMatrix;
