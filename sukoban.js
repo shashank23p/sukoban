@@ -11,7 +11,7 @@ const sukoban = (input) => {
   if (!r || !c)
     return {
       error:
-        "Line 1 of Input should be two integers seprated by space, Represention number of rows and coloums of maze",
+        "Line 1 of Input should be two integers separated by space, Representing number of rows and columns of maze",
     };
   if (r > 20 || c > 20)
     return {
